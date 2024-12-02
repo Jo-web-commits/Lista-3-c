@@ -2,13 +2,15 @@
 #include <stdlib.h>
 #include <time.h>
 
+#define TAM 15
+
 int main (void) {
     srand(time(NULL));
 
-    float vect[15];
+    float vect[TAM];
     float max, min;
 
-    for(int i = 0; i < 15; i++) {
+    for(int i = 0; i < TAM; i++) {
         vect[i] = rand() % 100;
         printf("[%.2f] ", vect[i]);
     }
@@ -19,7 +21,7 @@ int main (void) {
     min = vect[0];
     max = vect[0];
 
-    for(int i = 0; i < 15; i++) {
+    for(int i = 0; i < TAM; i++) {
         if(max < vect[i]) max = vect[i];
         if(min > vect[i]) min = vect[i];
     }
